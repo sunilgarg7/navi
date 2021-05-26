@@ -1,0 +1,21 @@
+For using this utility:-
+1st enter the number of orders 'n'  that is expected to be read from the console.
+2nd Then in next 'n' rows enter orders as specified belwo :
+* Order format
+		 *  #1 09:45 BAC sell 100 240.10 
+		 *  #3 09:47 BAC buy 80 238.10 
+		 *  #7 09:52 TCS buy 10 1001.10
+In real world Application, we would be continuously getting Orders through API which will be processed as when they get into system if any matching order exists
+
+The output after Processing buy/Sell order will also be Printed on the console :-
+(format:<sell-order-id> <qty> <sell-price> <buy-order-id>):
+#2 80 237.45 #3
+#2 10 237.45 #6
+
+
+
+To build this project, Use following command direclty where the pom.xml is place:-
+mvn clean install 
+
+then run the Navi exchange by using following command from the same folder where pom.xml was placed:-
+java -jar target/navi-0.0.1-SNAPSHOT.jar
